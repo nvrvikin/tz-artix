@@ -1,0 +1,60 @@
+.cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    &__hint {
+        display: flex;
+        box-sizing: border-box;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        justify-content: center;
+        align-items: center;
+        background-color: #0f0f0f00;
+        border: 2px solid #fafafa00;
+        transition: .3s ease;
+        border-radius: .5rem;
+
+        &__idle, &__fin {
+        }
+
+        &_idle {
+            color: #fafafa40;
+            border: 2px solid #fafafa10;
+        }
+
+        &_fin {
+            color: #c3f3d6;
+            background-color: #0f0f0f;
+        }
+    }
+
+    .cards-wrapper {
+        padding: 1rem 0rem;
+        box-sizing: border-box;
+        display: grid;
+        width: 100%;
+        gap: 1rem;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: auto;
+
+        @include between($lg, $xl) {
+            grid-template-columns: repeat(6, 1fr);
+        }
+
+        @include between($md, $lg) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @include between($sm, $md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include smaller($sm) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

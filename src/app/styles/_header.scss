@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d2025;
+    padding: .3rem 0;
+
+    &__title {
+        color: #7a92ff; 
+        margin-right: 3rem;
+
+        @include smaller($sm) {
+            margin-right: 1rem;
+        }
+    }
+
+    &__nav {
+        display: flex;
+
+        .header-nav__link {
+            text-decoration: none;
+            color: #c0caf8;
+            padding: .5rem 1rem;
+            font-size: .8rem;
+            transition: .2s ease;
+            text-transform: uppercase;
+            white-space: nowrap;
+
+            &:hover {
+                color: $action-color;
+            }
+        }
+    }
+}

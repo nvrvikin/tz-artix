@@ -1,0 +1,32 @@
+.card {
+    display: flex;
+    height: 20dvh;
+    border-radius: 1.5rem;
+    padding: 1rem 1.5rem;
+    box-sizing: border-box;
+    flex-direction: column;
+    font-size: 1rem;
+
+    &__color {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        background-color: #1f1f1f;
+        color: #fafafa;
+        box-sizing: border-box;
+        border-radius: .5rem;
+        padding: .5rem 1rem;
+        margin-bottom: .5rem;
+    }
+
+    &__countdown {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #1f1f1f;
+        background-color: #fafafa;
+        border-radius: .5rem;
+        padding: .5rem 1rem;
+    }
+}
