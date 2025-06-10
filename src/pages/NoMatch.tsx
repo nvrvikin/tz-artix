@@ -1,4 +1,4 @@
-import BaseLayout from "@/app/layouts/baseLayout"
+import BaseLayout from "@/app/layouts/BaseLayout"
 
 export default function NoMatch() {
   return (
