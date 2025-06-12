@@ -9,11 +9,13 @@ export interface ICardData {
     bgColor: string
     countdown: number
     isDrawn: boolean
+    updateCountdown: () => void
 }
 
 export interface ICard {
     bgColor: string
     countdown: number
+    updateCountdown: () => void
 }
 
 export interface IDrawCards {

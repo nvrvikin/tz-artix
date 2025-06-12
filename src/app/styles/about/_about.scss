@@ -5,6 +5,19 @@
     align-items: center;
     width: 100%;
 
+    a {
+        color: $action-light-color;
+        transition: .2s ease;
+
+        &:hover {
+            color: $action-color;
+        }
+    }
+
+    code {
+        color: $second-color;
+    }
+
     &__title {
         font-style: normal;
     }

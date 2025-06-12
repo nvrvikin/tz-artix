@@ -18,13 +18,26 @@ function Cards(props: ICards) {
     const isStartedRef = useRef(isStarted)
     //const isFinishedRef = useRef(isFinished)
 
+    const updateCardCountdown = (id: string) => {
+        const localCardsData = cardsDataRef.current
+        let newCardsData = localCardsData.map(cd => {
+            if(cd.id !== id) return cd;
+            return {
+                ...cd,
+                countdown: defineRandomCountdown()
+            }
+        })
+        setCardsData(newCardsData)
+    }
+
     const newItem = (newId: number): ICardData => {
 
         return {
             id: `${ newId }`,
             bgColor: defineRandomHexColor(),
             countdown: defineRandomCountdown(),
-            isDrawn: false
+            isDrawn: false,
+            updateCountdown: () => updateCardCountdown(`${ newId }`)
         }
     }
 

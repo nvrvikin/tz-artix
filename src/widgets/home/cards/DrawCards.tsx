@@ -9,8 +9,9 @@ function DrawCards(props: IDrawCards) {
                 {
                     cardsData.filter(card => card.isDrawn).map(card =>
                         <Card key={ card.id }
-                            bgColor={ card.bgColor }
-                            countdown={ card.countdown } />)
+                        bgColor={ card.bgColor }
+                        countdown={ card.countdown } 
+                        updateCountdown={ card.updateCountdown } />)
                 }
             </>
         )
