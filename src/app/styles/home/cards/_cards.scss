@@ -18,9 +18,6 @@
         transition: .3s ease;
         border-radius: .5rem;
 
-        &__idle, &__fin {
-        }
-
         &_idle {
             color: #fafafa40;
             border: 2px solid #fafafa10;
