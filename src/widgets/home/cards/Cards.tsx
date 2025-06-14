@@ -5,7 +5,7 @@ import DrawCards from "./DrawCards";
 import CardsHint from "./CardsHint";
 
 function Cards(props: ICards) {
-    const { isStarted, count, interval } = props
+    const { isStarted, count, interval, setProgress } = props
 
     // STATES
     const [cardsData, setCardsData] = useState<ICardData[]>([])
@@ -92,6 +92,7 @@ function Cards(props: ICards) {
 
                 setCardsData(newCardsData)
                 setCurrentInterval(localCurrentInterval)
+                setProgress(count - newCardsData.length)
             }
 
             let filledCardsData = []

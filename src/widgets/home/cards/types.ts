@@ -2,6 +2,7 @@ export interface ICards {
     isStarted: boolean
     interval: number
     count: number
+    setProgress: (value: number) => void
 }
 
 export interface ICardData {
