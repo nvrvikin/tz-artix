@@ -48,6 +48,7 @@ function Cards(props: ICards) {
     useEffect(() => {
         if(!isStarted) {
             setCardsData([])
+            setProgress(0)
             if(isFinished) setIsFinished(false)
         } else {
             if(isFinished) return;
